@@ -4,11 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
 
 # Define the list of allowed origins
-origins = [
-    "http://localhost",
-    "http://localhost:8000",
-    # Add more origins as needed
-]
+origins = ['*']
 
 # Add CORS middleware to the FastAPI app
 app.add_middleware(
