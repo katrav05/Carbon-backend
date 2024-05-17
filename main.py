@@ -1,6 +1,23 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+# Define the list of allowed origins
+origins = [
+    "http://localhost",
+    "http://localhost:8000",
+    # Add more origins as needed
+]
+
+# Add CORS middleware to the FastAPI app
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 transport_data = {
     '2-Wheeler': 400,
