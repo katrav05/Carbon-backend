@@ -1,0 +1,13 @@
+fastapi
+pydantic
+pydantic[email]
+python-dotenv
+pydantic-settings
+resend
+PyJWT
+bcrypt
+uvicorn
+starlette
+psycopg2-binary
+itsdangerous
+python-jose
